@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Template SaaS
 
-## Getting Started
+Um template de aplicação SaaS (Software as a Service) construído com Next.js 15, React 19, Firebase, NextAuth e Stripe para processamento de pagamentos.
 
-First, run the development server:
+## 🚀 Tecnologias
 
+Este projeto utiliza as seguintes tecnologias:
+
+- [Next.js 15](https://nextjs.org/) - Framework React com renderização híbrida
+- [React 19](https://react.dev/) - Biblioteca para construção de interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Superset tipado de JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitário
+- [NextAuth](https://next-auth.js.org/) - Autenticação para Next.js
+- [Firebase](https://firebase.google.com/) - Plataforma de desenvolvimento de aplicativos
+- [Stripe](https://stripe.com/) - Plataforma de processamento de pagamentos
+
+## 📋 Pré-requisitos
+
+- Node.js (versão recomendada: 20.x ou superior)
+- npm ou yarn
+- Conta no Firebase
+- Conta no Stripe
+
+## 🔧 Instalação
+
+1. Clone o repositório:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [url-do-repositorio]
+cd template-saas
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instale as dependências:
+```bash
+npm install
+# ou
+yarn
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Configure as variáveis de ambiente:
+   - Crie um arquivo `.env.local` na raiz do projeto com as seguintes variáveis:
+     ```
+     # Firebase
+     FIREBASE_API_KEY=
+     FIREBASE_AUTH_DOMAIN=
+     FIREBASE_PROJECT_ID=
+     FIREBASE_STORAGE_BUCKET=
+     FIREBASE_MESSAGING_SENDER_ID=
+     FIREBASE_APP_ID=
+     
+     # NextAuth
+     AUTH_SECRET=
+     
+     # Stripe
+     STRIPE_API_KEY=
+     STRIPE_WEBHOOK_SECRET=
+     ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Execute o servidor de desenvolvimento:
+```bash
+npm run dev
+# ou
+yarn dev
+```
 
-## Learn More
+## 🏗️ Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+```
+/app
+  /(project) - Páginas principais da aplicação
+    /dashboard - Área logada do usuário
+    /login - Autenticação de usuários
+  /api - Rotas de API
+  /components - Componentes React reutilizáveis
+  /hooks - Custom hooks React
+  /lib - Funções utilitárias
+  /actions - Server actions do Next.js
+  /server - Configurações do lado do servidor
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Funcionalidades
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Autenticação de usuários com NextAuth e Firebase
+- Dashboard para usuários logados
+- Integração com Stripe para pagamentos de assinaturas
+- Layout responsivo com Tailwind CSS
 
-## Deploy on Vercel
+## 🚢 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para fazer o build da aplicação para produção:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+# ou
+yarn build
+```
+
+Para iniciar a aplicação em produção:
+
+```bash
+npm run start
+# ou
+yarn start
+```
+
+## 📄 Licença
+
+Este projeto está sob a licença [MIT](https://choosealicense.com/licenses/mit/).
+
+---
+
+Desenvolvido como projeto de estudo da Rocketseat.
